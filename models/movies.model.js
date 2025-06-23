@@ -3,8 +3,15 @@ import { model, Schema } from "mongoose";
 //Schmea is like rules for the data
 //The Schema defines the structure (what fields a student should have).
 const schema =new Schema({
-    title:String,
-    desc:String
+    title:{
+        type:String,
+        required:true,
+        unique:true
+    },
+    desc:{
+        type:String,
+        required:true,
+    }
 })
 
 //Create a Model
