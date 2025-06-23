@@ -7,6 +7,9 @@ const PORT=8000;
 
 connectDB()
 
+app.use(express.json())
+
+
 app.get('/',(req,res)=>{
     res.json({message:"Welcome to my Site"})
 
